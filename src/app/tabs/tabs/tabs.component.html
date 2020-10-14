@@ -1,0 +1,26 @@
+<div class="tabs__titles">
+  <div
+    *ngFor="let tabTitle of tabTitles; let i = index"
+    [class.tabs__title--active]="selectedTabIndex === i"
+    class="tabs__title"
+  >
+    <div (click)="selectTab(i)">
+      <ng-template [ngTemplateOutlet]="tabTitle.innerTemplate"></ng-template>
+    </div>
+
+    <span (click)="removeTab(i)"> remove tab </span>
+  </div>
+</div>
+
+<div *ngFor="let tabContent of tabContents; let i = index">
+  <ng-container *ngIf="selectedTabIndex === i">
+    <ng-template [ngTemplateOutlet]="tabContent.innerTemplate"></ng-template>
+  </ng-container>
+</div>
+
+
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+
+<!--<ng-content></ng-content>-->
