@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser'
 import { AppComponent } from './app.component'
 import { TabsModule } from './tabs/tabs.module'
 import { TestComponent } from './test.component'
+import { ViewResizerModule } from './view-resizer/view-resizer.module'
 
 @NgModule({
   declarations: [
@@ -12,7 +13,11 @@ import { TestComponent } from './test.component'
   ],
   imports: [
     BrowserModule,
-    TabsModule
+    TabsModule,
+    ViewResizerModule.forRoot({
+      medium: 500,
+      large: 700
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

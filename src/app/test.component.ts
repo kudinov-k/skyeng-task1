@@ -1,17 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core'
+import { Component, Input } from '@angular/core'
 
 @Component({
   selector: 'test',
-  template: `
-    <div>
-      TestComponent {{ this.tab }} content
-    </div>
-  `,
+  template: `{{ value }}`,
 })
-export class TestComponent implements OnInit {
-  @Input() tab: number
-
-  ngOnInit(): void {
-    console.log(`>>> TestComponent ${this.tab} initialized`)
-  }
+export class TestComponent {
+  @Input() value: number
 }

@@ -1,20 +1,25 @@
-<button (click)="dec()">
-  Remove tab
-</button>
-<button (click)="inc()">
-  Add tab
-</button>
+<!--<button (click)="dec()">-->
+<!--  Remove tab-->
+<!--</button>-->
+<!--<button (click)="inc()">-->
+<!--  Add tab-->
+<!--</button>-->
 
-<br>
+<!--<br>-->
 
-<tabs>
-  <tab *ngFor="let tab of tabs">
-    <tab-title>
-      Tab <b>{{ tab }}</b> title
-    </tab-title>
-    <tab-content>
-      Tab <b>{{ tab }}</b> content
-      <test [tab]="tab"></test>
-    </tab-content>
-  </tab>
-</tabs>
+<!--<tabs>-->
+<!--  <tab *ngFor="let tab of tabs">-->
+<!--    <tab-title>-->
+<!--      Tab <b>{{ tab }}</b> title-->
+<!--    </tab-title>-->
+<!--    <tab-content>-->
+<!--      Tab <b>{{ tab }}</b> content-->
+<!--      <test [tab]="tab"></test>-->
+<!--    </tab-content>-->
+<!--  </tab>-->
+<!--</tabs>-->
+
+
+<test *ifViewportSize="'small'" [value]="1"></test>
+<test *ifViewportSize="'medium'" [value]="2"></test>
+<test *ifViewportSize="'large'" [value]="3"></test>
